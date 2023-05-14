@@ -54,8 +54,14 @@ class _MedecineDetailsCard extends State<MedecineDetailsCard> {
               Text(
                 widget.medecinename,
               ),
+              const SizedBox(
+                width: 10,
+              ),
               Text(
                 widget.time,
+              ),
+              const SizedBox(
+                height: 20,
               ),
               Text(
                 widget.sign,

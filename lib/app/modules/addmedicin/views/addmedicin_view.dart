@@ -50,7 +50,7 @@ class AddmedicinView extends GetView<AddmedicinController> {
                               onPressed: () {
                                 showForm(null, context);
                               },
-                              child: Text("Add Medecine"))
+                              child: const Text("Add Medecine"))
                         ],
                       )),
                     ],

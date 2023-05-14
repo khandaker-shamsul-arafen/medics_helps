@@ -1,9 +1,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart' as sql;
+import 'package:sqflite/sqflite.dart';
 
 class SqlHelper {
   static Future<void> createTables(sql.Database database) async {
+    //database.execute('DROP TABLE IF EXISTS Company');
     await database.execute(
         'CREATE TABLE tdl_Data( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,medecinename TEXT,time TEXT,sign Text)');
   }
@@ -17,6 +19,18 @@ class SqlHelper {
       },
     );
   }
+
+  // static  db1() async {
+  //   var db2 = await factory.openDatabase(path,
+  //       options: OpenDatabaseOptions(
+  //           version: 1,
+  //           onCreate: (db, version) async {
+  //             var batch = db.batch();
+  //           //  _createTableCompanyV1(batch);
+  //             await batch.commit();
+  //           },
+  //           onDowngrade: onDatabaseDowngradeDelete));
+  // }
 
   static Future<List<Map<String, dynamic>>> getItems() async {
     final db = await SqlHelper.db();
