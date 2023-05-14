@@ -7,6 +7,7 @@ abstract class Routes {
   static const REGISTRATION = _Paths.REGISTRATION;
   static const ADDMEDICIN = _Paths.ADDMEDICIN;
   static const OTPPAGE = _Paths.OTPPAGE;
+  static const TTF = _Paths.TTF;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const REGISTRATION = '/registration';
   static const ADDMEDICIN = '/addmedicin';
   static const OTPPAGE = '/otppage';
+  static const TTF = '/ttf';
 }
