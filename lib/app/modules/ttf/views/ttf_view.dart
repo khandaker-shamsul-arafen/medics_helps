@@ -10,7 +10,7 @@ class TtfView extends GetView<TtfController> {
 
   @override
   Widget build(BuildContext context) {
-    FlutterTts ftts = FlutterTts();
+    // FlutterTts ftts = FlutterTts();
     return Scaffold(
       appBar: AppBar(
         title: const Text('TtfView'),
@@ -19,8 +19,8 @@ class TtfView extends GetView<TtfController> {
       body: Center(
           child: ElevatedButton(
               onPressed: () {
-                ftts.speak(
-                    "Hi My Name Is Shanto. I HAve a no Coding Skill. But i Try ");
+                controller.scheduleNotificationWithSpeech(
+                    'Learn As Much As Possible');
               },
               child: const Text('Play'))),
     );
